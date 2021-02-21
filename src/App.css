@@ -1,38 +1,94 @@
 .App {
+  height: 35em;
+  width: 20em;
+  margin: 4em auto;
+  padding: 1em;
+  background: white;
+  border-radius: 2em;
+  overflow: scroll;
+}
+.App::-webkit-scrollbar{
+  display: none;
+}
+
+
+h1{
   text-align: center;
+  background-color: #b366b3;
+  color: aliceblue;
+  margin-bottom: 1.5em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.note-taker{
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+}
+
+input{
+  text-align: center;
+  border: none;
+  border-bottom: 3px solid #b366b3;
+  width: 50%;
+  font-size: 1.6rem;
+}
+
+textarea:focus ,input:focus{
+  outline: none;
+  background: #E2CBFF;
+  border-radius: 10px;
+  border: none;
+}
+
+
+.add-btn{
+  display: flex;
+  color: aliceblue;
+  background: #b366b3;
+  font-weight: 600;
+  font-size: 2rem;
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.add-btn:hover{
+  background: #3CD014;
+  cursor:pointer;
+}
+
+.notes-container{
+  margin: 3em 2em 1em 2em;
+}
+
+.notes-display{
+  display: flex;
+  align-items: baseline;
+  margin: 0em 0em 1em 0em;
+}
+
+.remove-btn{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 1.5rem;
   color: white;
+  padding-top: 2px;
+  margin-right: 1em;
+  background-color: #b366b3;
+  transform: rotate(45deg);
 }
 
-.App-link {
-  color: #61dafb;
+.remove-btn:hover{
+  background: red;
+  cursor:pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note{
+  color: gray;
 }
